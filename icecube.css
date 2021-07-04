@@ -1,0 +1,107 @@
+:root {
+    --background: azure;
+    --main: lightskyblue;
+    --profile: cadetblue;
+    --ojos: azure;
+    --sonrisa: azure;
+    --moflete: lightpink;
+    --water: blue;
+}
+
+#icecube {
+    width: 80vmin;
+    height: 80vmin;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background);
+}
+
+.lados {
+    flex-basis: 35%;
+    height: 40%;
+    position: relative;
+
+}
+
+.lados > .lado {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 2%;
+    border: 1vmin solid var(--profile);
+    background-color: var(--main);
+}
+
+.uno {
+    top: 3%;
+    left: 0%;
+    transform: rotateX(-81deg) rotateY(0deg) skew(-30deg, 30deg);
+}
+
+.dos {
+    top: 64%;
+    right: 28%;
+    display: flex;
+    flex-direction: column;
+    transform: rotateX(0deg) rotateY(0deg) skew(0deg, 5deg);
+}
+
+.tres {
+    top: 60%;
+    left: 53%;
+    transform: rotateX(0deg) rotateY(49deg) skew(0deg, -10deg);
+}
+
+/* OJOS */
+
+.ojos   {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-basis: 50%;
+}
+
+.ojo {
+    width: 15%;
+    height: 10%;
+    border-top: 1vmin solid var(--ojos);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+/* BOCA */
+
+.boca {
+    display: flex;
+    justify-content: center;
+    flex-basis: 10%;
+
+}
+
+.sonrisa {
+    flex-basis: 33%;
+    border-bottom: 1vmin solid var(--sonrisa);
+    border-radius: 50%;
+}
+
+.moflete {
+    flex-basis: 47%;
+    border-radius: 50%;
+    background-color: var(--moflete);
+    margin: 0 5%;
+}
+
+/* SOMBRA */
+
+.sombra {
+    width: 260%;
+    height: 30%;
+    position: absolute;
+    top: 150%;
+    left: -81%;
+    border-radius: 50%;
+    background-color: var(--water);
+}
+
+
