@@ -1,55 +1,71 @@
 :root {
-    --background: azure;
-    --main: lightskyblue;
-    --profile: cadetblue;
-    --ojos: azure;
-    --sonrisa: azure;
-    --moflete: lightpink;
-    --water: blue;
+    --background: #8cd4ff;
+    --main: #c4e9ff;
+    --profile: rgb(121, 192, 250);
+    --ojos: #667686c4;
+    --sonrisa: #667686c4;
+    --moflete: #ffb6c1a6;
+    --water: lightblue;
+    --sun: #ffbc00;
+    --reflection: rgb(109, 150, 207);
 }
+
 
 #icecube {
-    width: 80vmin;
-    height: 80vmin;
+    
+    width: 1200px;
+    height: 400px;
+    /*width: 800px;
+    height: 400px;*/
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding: 0 5%;
     background-color: var(--background);
-}
-
-.lados {
-    flex-basis: 35%;
-    height: 40%;
+    overflow: hidden;
     position: relative;
+}
+
+.icecube {
+    width: 345px;
+    position: relative;
+    z-index: 0;
 
 }
 
-.lados > .lado {
-    width: 100%;
-    height: 100%;
+.lados  {
+    flex-basis: 80%;
+}
+
+.lado {
+    width: 30%;
+    height: 30%;
     position: absolute;
-    border-radius: 2%;
-    border: 1vmin solid var(--profile);
     background-color: var(--main);
+    box-shadow: inset 0vmin 0vmin 4vmin 2vmin var(--reflection);
+    background: linear-gradient(178deg, rgba(247,247,255,1) 0%, rgba(217,217,217,0.8) 51%, rgb(136 235 255) 100%);
 }
 
 .uno {
-    top: 3%;
-    left: 0%;
+    bottom: 33%;
+    right: 26%;
+    border-radius: 11%;
     transform: rotateX(-81deg) rotateY(0deg) skew(-30deg, 30deg);
 }
 
 .dos {
-    top: 64%;
-    right: 28%;
+    bottom: 16%;
+    right: 37%;
     display: flex;
     flex-direction: column;
+    border-radius: 10%;
     transform: rotateX(0deg) rotateY(0deg) skew(0deg, 5deg);
 }
 
 .tres {
-    top: 60%;
-    left: 53%;
+    bottom: 17%;
+    right: 12%;
+    border-radius: 10%;
     transform: rotateX(0deg) rotateY(49deg) skew(0deg, -10deg);
 }
 
@@ -92,16 +108,114 @@
     margin: 0 5%;
 }
 
-/* SOMBRA */
+/* AGUA */
 
-.sombra {
-    width: 260%;
-    height: 30%;
+.agua {
+    width: 93%;
+    height: 15%;
     position: absolute;
-    top: 150%;
-    left: -81%;
+    bottom: 10%;
+    left: 9%;
     border-radius: 50%;
-    background-color: var(--water);
+    background: #5a8796;
+    z-index: -1;
+    box-shadow: inset 7.5vmin 0vmin 2vmin 0vmin var(--water), 10.5vmin 1vmin 1vmin -1vmin #80502e7d;
+
 }
 
+/* GOTAS */
+
+.gota  {
+    width: 6%;
+    height: 5%;
+    background-color: lightskyblue;
+    border-block: 2px solid cornflowerblue;
+    position: absolute;
+    box-shadow: inset .5vmin 0vmin .3vmin 0.1vmin #d6ecfa;
+
+}
+
+.primera {
+    bottom: 42%;
+    right: 70%;
+    border-radius: 50% 0% 50% 50%;
+    transform: rotate(44deg);
+    
+}
+
+.segunda {
+    width: 3%;
+    height: 3%;
+    bottom: 38%;
+    right: 69%;
+    border-radius: 50% 50% 40% 50%;
+    transform: rotate(50deg);
+    
+}
+
+
+.tercera {
+    width: 4%;
+    height: 3%;
+    bottom: 49%;
+    right: 67%;
+    border-radius: 50% 50% 50% 0%;
+    transform: rotate(276deg);
+}
+
+
+.cuarta {
+    bottom: 34%;
+    right: 16%;
+    border-radius: 50% 50% 50% 0%;
+    transform: rotate(131deg);
+}
+
+
+/* SOL */
+
+.sun {
+    flex-basis: 131px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #ffcc13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    box-shadow: 0vmin 0vmin 40vmin 32vmin #ffd714, 0vmin 0vmin 40vmin 44vmin white;
+   
+}
+
+.esfera {
+    width: 99%;
+    height: 99%;
+    border-radius: 50%;
+    background-color: var(--sun);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0vmin 0vmin 2vmin 2vmin #efa622;
+}
+
+.esfera > h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: orangered;
+    font-size: 46px;
+}
+
+/* SUELO */
+
+.suelo {
+    width: 73%;
+    height: 29%;
+    background-color: khaki;
+    border-radius: 660% 7% 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-shadow: inset 3vmin -0.4vmin 2vmin 0vmin #9f4f00, inset 1vmin 0vmin 3vmin 1vmin rgb(243 214 134), -55vmin 63vmin .1vmin 65vmin #348ee6, -70vmin 58vmin .1vmin 60vmin #5481d3;
+
+}
 
